@@ -6,5 +6,5 @@ This is the repository for our first assignment of Signals Systems and Random Pr
 - Pannala Naga Sheshu Reddy
 - Pavan Deekshith Doddi
 
-# Objective of our project
+## Objective of our project
 To design an android/iOS app for child safety monitoring. We aim to create an app that detects any over speeding, accidents and crossing of boundaries of a child riding a bicycle. 
