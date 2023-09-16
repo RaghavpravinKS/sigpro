@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\ragha\\Documents\\IITGN\\Sem_3\\SSRP\\Assignment_I\\sample_model_ert_rtw\\sample_model\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h600dp-port-v13\\values-h600dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\ragha\\.gradle\\caches\\transforms-3\\b98e6b9fdda11fe260c03c8fafde63ff\\transformed\\material-1.3.0\\res\\values-h600dp-port-v13\\values-h600dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "51",
+                        "endOffsets": "102"
+                    }
+                }
+            ]
+        }
+    ]
+}

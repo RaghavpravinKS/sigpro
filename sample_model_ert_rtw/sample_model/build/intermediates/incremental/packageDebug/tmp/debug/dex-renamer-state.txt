@@ -1,0 +1,4 @@
+#Thu Sep 14 22:00:55 IST 2023
+base.0=C\:\\Users\\ragha\\Documents\\IITGN\\Sem_3\\SSRP\\Assignment_I\\sample_model_ert_rtw\\sample_model\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
