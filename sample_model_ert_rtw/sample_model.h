@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'sample_model'.
  *
- * Model version                  : 1.1
+ * Model version                  : 1.2
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Thu Sep 14 22:00:47 2023
+ * C/C++ source code generated on : Sat Sep 16 16:35:03 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -24,12 +24,11 @@
 #include "rtwtypes.h"
 #include "driver_android_datadisplay.h"
 #include "driver_android_accelerometer.h"
-#include "driver_android_camera.h"
 #include "driver_android_gyroscope.h"
 #include "driver_android_location.h"
 #include "MW_TCPSendReceive.h"
 #include "driver_android_tcp_log.h"
-#include "driver_android_videodisplay.h"
+#include "driver_android_thingspeak_write.h"
 #endif                                 /* sample_model_COMMON_INCLUDES_ */
 
 #include "sample_model_types.h"
@@ -46,20 +45,18 @@
 
 /* Block signals (default storage) */
 typedef struct {
-  uint8_T b_varargout_3[307200];
-  uint8_T b_varargout_2[307200];
-  uint8_T b_varargout_1[307200];
   real_T out[3];
-  real32_T out_m[3];
+  char_T b[17];
+  char_T str_data[16];
+  char_T b_str_data[16];
 } B_sample_model_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
   codertarget_internal_androidT_T obj; /* '<Root>/TCP//IP Send' */
   codertarget_internal_androidA_T obj_n;/* '<S4>/Accelerometer' */
-  codertarget_internal_androidG_T obj_h;/* '<S10>/MATLAB System' */
-  codertarget_internal_androidL_T obj_c;/* '<S12>/Location Sensor' */
-  codertarget_internal_androidC_T obj_dy;/* '<S9>/Camera' */
+  codertarget_internal_androidG_T obj_h;/* '<S9>/MATLAB System' */
+  codertarget_internal_androidL_T obj_c;/* '<S11>/Location Sensor' */
 } DW_sample_model_T;
 
 /* Real-time Model Data Structure */
@@ -117,12 +114,10 @@ extern volatile boolean_T runModel;
  * '<S6>'   : 'sample_model/Ang. Vel - x'
  * '<S7>'   : 'sample_model/Ang. Vel. - y'
  * '<S8>'   : 'sample_model/Ang. Vel. -z'
- * '<S9>'   : 'sample_model/Camera'
- * '<S10>'  : 'sample_model/Gyroscope'
- * '<S11>'  : 'sample_model/Latitude'
- * '<S12>'  : 'sample_model/Location Sensor'
- * '<S13>'  : 'sample_model/Longitude'
- * '<S14>'  : 'sample_model/Video Display'
+ * '<S9>'   : 'sample_model/Gyroscope'
+ * '<S10>'  : 'sample_model/Latitude'
+ * '<S11>'  : 'sample_model/Location Sensor'
+ * '<S12>'  : 'sample_model/Longitude'
  */
 #endif                                 /* RTW_HEADER_sample_model_h_ */
 

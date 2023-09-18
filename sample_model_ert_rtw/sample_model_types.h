@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'sample_model'.
  *
- * Model version                  : 1.1
+ * Model version                  : 1.2
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Thu Sep 14 22:00:47 2023
+ * C/C++ source code generated on : Sat Sep 16 16:35:03 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -55,23 +55,6 @@ struct tag_SYZPi1slpveeienwB5Zsk
 typedef struct tag_SYZPi1slpveeienwB5Zsk codertarget_internal_androidA_T;
 
 #endif                             /* typedef_codertarget_internal_androidA_T */
-
-#ifndef struct_tag_caXJPkYqtvRD2QlOmDVTLC
-#define struct_tag_caXJPkYqtvRD2QlOmDVTLC
-
-struct tag_caXJPkYqtvRD2QlOmDVTLC
-{
-  int32_T isInitialized;
-};
-
-#endif                                 /* struct_tag_caXJPkYqtvRD2QlOmDVTLC */
-
-#ifndef typedef_codertarget_internal_androidC_T
-#define typedef_codertarget_internal_androidC_T
-
-typedef struct tag_caXJPkYqtvRD2QlOmDVTLC codertarget_internal_androidC_T;
-
-#endif                             /* typedef_codertarget_internal_androidC_T */
 
 #ifndef struct_tag_FW65GuaxzeSquI0AV2BMZC
 #define struct_tag_FW65GuaxzeSquI0AV2BMZC
@@ -132,22 +115,22 @@ typedef struct tag_fsdYSW0IiGzpKfGBI5XIiG codertarget_internal_androidT_T;
 
 #endif                             /* typedef_codertarget_internal_androidT_T */
 
-#ifndef struct_tag_mevCpkWfHFsEsh9bPwHrG
-#define struct_tag_mevCpkWfHFsEsh9bPwHrG
+#ifndef struct_tag_Lv0uUALCH2bKGjhxFwlfCF
+#define struct_tag_Lv0uUALCH2bKGjhxFwlfCF
 
-struct tag_mevCpkWfHFsEsh9bPwHrG
+struct tag_Lv0uUALCH2bKGjhxFwlfCF
 {
   int32_T isInitialized;
 };
 
-#endif                                 /* struct_tag_mevCpkWfHFsEsh9bPwHrG */
+#endif                                 /* struct_tag_Lv0uUALCH2bKGjhxFwlfCF */
 
-#ifndef typedef_codertarget_internal_androidV_T
-#define typedef_codertarget_internal_androidV_T
+#ifndef typedef_codertarget_internal_androi_o_T
+#define typedef_codertarget_internal_androi_o_T
 
-typedef struct tag_mevCpkWfHFsEsh9bPwHrG codertarget_internal_androidV_T;
+typedef struct tag_Lv0uUALCH2bKGjhxFwlfCF codertarget_internal_androi_o_T;
 
-#endif                             /* typedef_codertarget_internal_androidV_T */
+#endif                             /* typedef_codertarget_internal_androi_o_T */
 
 /* Forward declaration for rtModel */
 typedef struct tag_RTM_sample_model_T RT_MODEL_sample_model_T;

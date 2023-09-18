@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'sample_model'.
  *
- * Model version                  : 1.1
+ * Model version                  : 1.2
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Thu Sep 14 22:00:47 2023
+ * C/C++ source code generated on : Sat Sep 16 16:35:03 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -18,8 +18,8 @@
  */
 
 #include "sample_model.h"
-#include "rtwtypes.h"
 #include "sample_model_types.h"
+#include "rtwtypes.h"
 #include <string.h>
 #include "sample_model_private.h"
 #include <stddef.h>
@@ -36,8 +36,6 @@ static RT_MODEL_sample_model_T sample_model_M_;
 RT_MODEL_sample_model_T *const sample_model_M = &sample_model_M_;
 
 /* Forward declaration for local functions */
-static void sample_model_SystemCore_step(uint8_T varargout_1[307200], uint8_T
-  varargout_2[307200], uint8_T varargout_3[307200]);
 static void sample_model_SystemCore_setup(codertarget_internal_androidT_T *obj);
 static void rate_scheduler(void);
 
@@ -53,15 +51,9 @@ static void rate_scheduler(void)
    * counter is reset when it reaches its limit (zero means run).
    */
   (sample_model_M->Timing.TaskCounters.TID[1])++;
-  if ((sample_model_M->Timing.TaskCounters.TID[1]) > 99) {/* Sample time: [0.1s, 0.0s] */
+  if ((sample_model_M->Timing.TaskCounters.TID[1]) > 9) {/* Sample time: [1.0s, 0.0s] */
     sample_model_M->Timing.TaskCounters.TID[1] = 0;
   }
-}
-
-static void sample_model_SystemCore_step(uint8_T varargout_1[307200], uint8_T
-  varargout_2[307200], uint8_T varargout_3[307200])
-{
-  GET_CAMERA_DATA(&varargout_1[0], &varargout_2[0], &varargout_3[0]);
 }
 
 real_T rt_roundd_snf(real_T u)
@@ -88,14 +80,14 @@ static void sample_model_SystemCore_setup(codertarget_internal_androidT_T *obj)
   int32_T i;
   int16_T errorNo;
   uint16_T tmp_0;
-  char_T b_str_data[12];
-  char_T ipaddr[12];
-  static const char_T tmp_1[12] = "10.7.61.104";
+  char_T b_str_data[16];
+  char_T ipaddr[16];
+  static const char_T tmp_1[16] = "192.168.240.220";
   int32_T str_size_idx_1;
   obj->isInitialized = 1;
   errorNo = obj->errorNo_;
   obj->isServer_ = 0.0;
-  for (i = 0; i < 12; i++) {
+  for (i = 0; i < 16; i++) {
     ipaddr[i] = tmp_1[i];
   }
 
@@ -121,8 +113,8 @@ static void sample_model_SystemCore_setup(codertarget_internal_androidT_T *obj)
       UPDATE_TCP_LOGI(obj->errorNo_, 1.0, 0, MAX_int16_T);
     } else {
       if (obj->errorNo_ == 5) {
-        str_size_idx_1 = 12;
-        for (i = 0; i < 12; i++) {
+        str_size_idx_1 = 16;
+        for (i = 0; i < 16; i++) {
           ipaddr[i] = tmp_1[i];
         }
       }
@@ -138,55 +130,37 @@ static void sample_model_SystemCore_setup(codertarget_internal_androidT_T *obj)
 void sample_model_step(void)
 {
   real_T outData;
-  int32_T i;
+  int32_T sendPost;
+  real32_T out[3];
   real32_T dataIn;
   int16_T errorNo;
   uint16_T tmp;
-  char_T b_str_data[12];
-  char_T str_data[12];
   char_T b_FormatStringTerminated[5];
   char_T b_FormatStringTerminated_0[5];
   uint8_T b_x[4];
   uint8_T xtmp;
-  static const char_T tmp_0[12] = "10.7.61.104";
+  static const char_T tmp_0[16] = "192.168.240.220";
   int32_T str_size_idx_1;
-
-  /* MATLABSystem: '<S9>/Camera' */
-  sample_model_SystemCore_step(sample_model_B.b_varargout_1,
-    sample_model_B.b_varargout_2, sample_model_B.b_varargout_3);
-
-  /* MATLABSystem: '<S14>/Video Display' incorporates:
-   *  MATLABSystem: '<S9>/Camera'
-   */
-  PUT_VIDEO_DISPLAY_DATA(&sample_model_B.b_varargout_1[0],
-    &sample_model_B.b_varargout_2[0], &sample_model_B.b_varargout_3[0]);
   if (sample_model_M->Timing.TaskCounters.TID[1] == 0) {
     /* MATLABSystem: '<S4>/Accelerometer' */
-    sample_model_B.out_m[0] = 0.0F;
-    sample_model_B.out_m[1] = 0.0F;
-    sample_model_B.out_m[2] = 0.0F;
-    GET_ACCELEROMETER_DATA(&sample_model_B.out_m[0], &sample_model_B.out_m[1],
-      &sample_model_B.out_m[2]);
+    out[0] = 0.0F;
+    out[1] = 0.0F;
+    out[2] = 0.0F;
+    GET_ACCELEROMETER_DATA(&out[0], &out[1], &out[2]);
 
     /* MATLABSystem: '<S1>/DataDisplay' incorporates:
-     *  MATLABSystem: '<S11>/DataDisplay'
-     *  MATLABSystem: '<S13>/DataDisplay'
      *  MATLABSystem: '<S2>/DataDisplay'
      *  MATLABSystem: '<S3>/DataDisplay'
      *  MATLABSystem: '<S4>/Accelerometer'
-     *  MATLABSystem: '<S5>/DataDisplay'
-     *  MATLABSystem: '<S6>/DataDisplay'
-     *  MATLABSystem: '<S7>/DataDisplay'
-     *  MATLABSystem: '<S8>/DataDisplay'
      */
-    outData = sample_model_B.out_m[0];
+    outData = out[0];
     b_FormatStringTerminated_0[0] = '%';
     b_FormatStringTerminated_0[1] = '.';
     b_FormatStringTerminated_0[2] = '6';
     b_FormatStringTerminated_0[3] = 'f';
     b_FormatStringTerminated_0[4] = '\x00';
-    for (i = 0; i < 5; i++) {
-      b_FormatStringTerminated[i] = b_FormatStringTerminated_0[i];
+    for (sendPost = 0; sendPost < 5; sendPost++) {
+      b_FormatStringTerminated[sendPost] = b_FormatStringTerminated_0[sendPost];
     }
 
     PUT_DATADISPLAY_DATA(&outData, 1.0, 9, 1, &b_FormatStringTerminated[0]);
@@ -196,9 +170,9 @@ void sample_model_step(void)
     /* MATLABSystem: '<S2>/DataDisplay' incorporates:
      *  MATLABSystem: '<S4>/Accelerometer'
      */
-    outData = sample_model_B.out_m[1];
-    for (i = 0; i < 5; i++) {
-      b_FormatStringTerminated[i] = b_FormatStringTerminated_0[i];
+    outData = out[1];
+    for (sendPost = 0; sendPost < 5; sendPost++) {
+      b_FormatStringTerminated[sendPost] = b_FormatStringTerminated_0[sendPost];
     }
 
     PUT_DATADISPLAY_DATA(&outData, 2.0, 9, 1, &b_FormatStringTerminated[0]);
@@ -206,21 +180,16 @@ void sample_model_step(void)
     /* MATLABSystem: '<S3>/DataDisplay' incorporates:
      *  MATLABSystem: '<S4>/Accelerometer'
      */
-    outData = sample_model_B.out_m[2];
-    for (i = 0; i < 5; i++) {
-      b_FormatStringTerminated[i] = b_FormatStringTerminated_0[i];
-    }
-
-    PUT_DATADISPLAY_DATA(&outData, 3.0, 9, 1, &b_FormatStringTerminated[0]);
+    outData = out[2];
+    PUT_DATADISPLAY_DATA(&outData, 3.0, 9, 1, &b_FormatStringTerminated_0[0]);
 
     /* MATLABSystem: '<Root>/TCP//IP Send' incorporates:
      *  MATLABSystem: '<S4>/Accelerometer'
      */
     errorNo = sample_model_DW.obj.errorNo_;
-    dataIn = sample_model_B.out_m[1];
+    dataIn = out[2];
     if (sample_model_DW.obj.isLittleEnd_ == 1) {
-      memcpy((void *)&b_x[0], (void *)&sample_model_B.out_m[1], (size_t)4 *
-             sizeof(uint8_T));
+      memcpy((void *)&b_x[0], (void *)&out[2], (size_t)4 * sizeof(uint8_T));
       xtmp = b_x[0];
       b_x[0] = b_x[3];
       b_x[3] = xtmp;
@@ -247,158 +216,194 @@ void sample_model_step(void)
         (sample_model_DW.obj.errorNo_ > 0) && (sample_model_DW.obj.errorNo_ < 10))
     {
       str_size_idx_1 = 1;
-      str_data[0] = '\x00';
+      sample_model_B.str_data[0] = '\x00';
       if (sample_model_DW.obj.errorNo_ == 4) {
         UPDATE_TCP_LOGI(sample_model_DW.obj.errorNo_, 1.0, 0, MAX_int16_T);
       } else {
         if (sample_model_DW.obj.errorNo_ == 5) {
-          str_size_idx_1 = 12;
-          for (i = 0; i < 12; i++) {
-            str_data[i] = tmp_0[i];
+          str_size_idx_1 = 16;
+          for (sendPost = 0; sendPost < 16; sendPost++) {
+            sample_model_B.str_data[sendPost] = tmp_0[sendPost];
           }
         }
 
-        memcpy(&b_str_data[0], &str_data[0], (uint32_T)str_size_idx_1 * sizeof
-               (char_T));
-        UPDATE_TCP_LOGS(sample_model_DW.obj.errorNo_, 1.0, 0, &b_str_data[0]);
+        memcpy(&sample_model_B.b_str_data[0], &sample_model_B.str_data[0],
+               (uint32_T)str_size_idx_1 * sizeof(char_T));
+        UPDATE_TCP_LOGS(sample_model_DW.obj.errorNo_, 1.0, 0,
+                        &sample_model_B.b_str_data[0]);
       }
     }
 
     /* End of MATLABSystem: '<Root>/TCP//IP Send' */
 
-    /* MATLABSystem: '<S12>/Location Sensor' */
-    sample_model_B.out[0] = 0.0;
-    sample_model_B.out[1] = 0.0;
-    sample_model_B.out[2] = 0.0;
-    GET_LOCATION_DATA(&sample_model_B.out[0], &sample_model_B.out[1],
-                      &sample_model_B.out[2]);
-
-    /* MATLABSystem: '<S5>/DataDisplay' incorporates:
-     *  MATLABSystem: '<S12>/Location Sensor'
+    /* MATLABSystem: '<Root>/ThingSpeak Write' incorporates:
+     *  MATLABSystem: '<S4>/Accelerometer'
      */
-    for (i = 0; i < 5; i++) {
-      b_FormatStringTerminated[i] = b_FormatStringTerminated_0[i];
+    CHECK_UPDATE_INTERVAL(1.0, &sendPost);
+    if (sendPost == 1) {
+      ADD_FIELD(1.0, 1, (real_T)out[0]);
+      ADD_FIELD(1.0, 2, (real_T)out[1]);
+      ADD_FIELD(1.0, 3, (real_T)out[2]);
+      ADD_FIELD(1.0, 4, 0.0);
+      ADD_FIELD(1.0, 5, 0.0);
+      ADD_FIELD(1.0, 6, 0.0);
+      ADD_FIELD(1.0, 7, 0.0);
+      ADD_FIELD(1.0, 8, 0.0);
+      SEND_POST_REQUEST(1.0);
     }
 
-    PUT_DATADISPLAY_DATA(&sample_model_B.out[2], 4.0, 9, 1,
-                         &b_FormatStringTerminated[0]);
-
-    /* MATLABSystem: '<S11>/DataDisplay' incorporates:
-     *  MATLABSystem: '<S12>/Location Sensor'
-     */
-    for (i = 0; i < 5; i++) {
-      b_FormatStringTerminated[i] = b_FormatStringTerminated_0[i];
-    }
-
-    PUT_DATADISPLAY_DATA(&sample_model_B.out[0], 8.0, 9, 1,
-                         &b_FormatStringTerminated[0]);
-
-    /* MATLABSystem: '<S13>/DataDisplay' incorporates:
-     *  MATLABSystem: '<S12>/Location Sensor'
-     */
-    for (i = 0; i < 5; i++) {
-      b_FormatStringTerminated[i] = b_FormatStringTerminated_0[i];
-    }
-
-    PUT_DATADISPLAY_DATA(&sample_model_B.out[1], 9.0, 9, 1,
-                         &b_FormatStringTerminated[0]);
-
-    /* MATLABSystem: '<S10>/MATLAB System' */
-    sample_model_B.out_m[0] = 0.0F;
-    sample_model_B.out_m[1] = 0.0F;
-    sample_model_B.out_m[2] = 0.0F;
-    GET_GYROSCOPE_DATA(&sample_model_B.out_m[0], &sample_model_B.out_m[1],
-                       &sample_model_B.out_m[2]);
-
-    /* MATLABSystem: '<S6>/DataDisplay' incorporates:
-     *  MATLABSystem: '<S10>/MATLAB System'
-     */
-    outData = sample_model_B.out_m[0];
-    for (i = 0; i < 5; i++) {
-      b_FormatStringTerminated[i] = b_FormatStringTerminated_0[i];
-    }
-
-    PUT_DATADISPLAY_DATA(&outData, 5.0, 9, 1, &b_FormatStringTerminated[0]);
-
-    /* MATLABSystem: '<S7>/DataDisplay' incorporates:
-     *  MATLABSystem: '<S10>/MATLAB System'
-     */
-    outData = sample_model_B.out_m[1];
-    for (i = 0; i < 5; i++) {
-      b_FormatStringTerminated[i] = b_FormatStringTerminated_0[i];
-    }
-
-    PUT_DATADISPLAY_DATA(&outData, 6.0, 9, 1, &b_FormatStringTerminated[0]);
-
-    /* MATLABSystem: '<S8>/DataDisplay' incorporates:
-     *  MATLABSystem: '<S10>/MATLAB System'
-     */
-    outData = sample_model_B.out_m[2];
-    PUT_DATADISPLAY_DATA(&outData, 7.0, 9, 1, &b_FormatStringTerminated_0[0]);
+    /* End of MATLABSystem: '<Root>/ThingSpeak Write' */
   }
 
+  /* MATLABSystem: '<S11>/Location Sensor' */
+  sample_model_B.out[0] = 0.0;
+  sample_model_B.out[1] = 0.0;
+  sample_model_B.out[2] = 0.0;
+  GET_LOCATION_DATA(&sample_model_B.out[0], &sample_model_B.out[1],
+                    &sample_model_B.out[2]);
+
+  /* MATLABSystem: '<S5>/DataDisplay' incorporates:
+   *  MATLABSystem: '<S10>/DataDisplay'
+   *  MATLABSystem: '<S11>/Location Sensor'
+   *  MATLABSystem: '<S12>/DataDisplay'
+   *  MATLABSystem: '<S6>/DataDisplay'
+   *  MATLABSystem: '<S7>/DataDisplay'
+   *  MATLABSystem: '<S8>/DataDisplay'
+   */
+  b_FormatStringTerminated_0[0] = '%';
+  b_FormatStringTerminated_0[1] = '.';
+  b_FormatStringTerminated_0[2] = '6';
+  b_FormatStringTerminated_0[3] = 'f';
+  b_FormatStringTerminated_0[4] = '\x00';
+  for (sendPost = 0; sendPost < 5; sendPost++) {
+    b_FormatStringTerminated[sendPost] = b_FormatStringTerminated_0[sendPost];
+  }
+
+  PUT_DATADISPLAY_DATA(&sample_model_B.out[2], 4.0, 9, 1,
+                       &b_FormatStringTerminated[0]);
+
+  /* End of MATLABSystem: '<S5>/DataDisplay' */
+
+  /* MATLABSystem: '<S10>/DataDisplay' incorporates:
+   *  MATLABSystem: '<S11>/Location Sensor'
+   */
+  for (sendPost = 0; sendPost < 5; sendPost++) {
+    b_FormatStringTerminated[sendPost] = b_FormatStringTerminated_0[sendPost];
+  }
+
+  PUT_DATADISPLAY_DATA(&sample_model_B.out[0], 8.0, 9, 1,
+                       &b_FormatStringTerminated[0]);
+
+  /* MATLABSystem: '<S12>/DataDisplay' incorporates:
+   *  MATLABSystem: '<S11>/Location Sensor'
+   */
+  for (sendPost = 0; sendPost < 5; sendPost++) {
+    b_FormatStringTerminated[sendPost] = b_FormatStringTerminated_0[sendPost];
+  }
+
+  PUT_DATADISPLAY_DATA(&sample_model_B.out[1], 9.0, 9, 1,
+                       &b_FormatStringTerminated[0]);
+
+  /* MATLABSystem: '<S9>/MATLAB System' */
+  out[0] = 0.0F;
+  out[1] = 0.0F;
+  out[2] = 0.0F;
+  GET_GYROSCOPE_DATA(&out[0], &out[1], &out[2]);
+
+  /* MATLABSystem: '<S6>/DataDisplay' incorporates:
+   *  MATLABSystem: '<S9>/MATLAB System'
+   */
+  outData = out[0];
+  for (sendPost = 0; sendPost < 5; sendPost++) {
+    b_FormatStringTerminated[sendPost] = b_FormatStringTerminated_0[sendPost];
+  }
+
+  PUT_DATADISPLAY_DATA(&outData, 5.0, 9, 1, &b_FormatStringTerminated[0]);
+
+  /* MATLABSystem: '<S7>/DataDisplay' incorporates:
+   *  MATLABSystem: '<S9>/MATLAB System'
+   */
+  outData = out[1];
+  for (sendPost = 0; sendPost < 5; sendPost++) {
+    b_FormatStringTerminated[sendPost] = b_FormatStringTerminated_0[sendPost];
+  }
+
+  PUT_DATADISPLAY_DATA(&outData, 6.0, 9, 1, &b_FormatStringTerminated[0]);
+
+  /* MATLABSystem: '<S8>/DataDisplay' incorporates:
+   *  MATLABSystem: '<S9>/MATLAB System'
+   */
+  outData = out[2];
+  PUT_DATADISPLAY_DATA(&outData, 7.0, 9, 1, &b_FormatStringTerminated_0[0]);
   rate_scheduler();
 }
 
 /* Model initialize function */
 void sample_model_initialize(void)
 {
-  /* Start for MATLABSystem: '<S9>/Camera' */
-  sample_model_DW.obj_dy.isInitialized = 1;
-  INITIALIZE_CAMERA(0.001, 2, 640, 480);
+  {
+    int32_T i;
+    static const char_T tmp[17] = "F3AJHHWU1CZNX648";
 
-  /* Start for MATLABSystem: '<S14>/Video Display' */
-  INITIALIZE_VIDEO_DISPLAY(640, 480);
+    /* Start for MATLABSystem: '<S4>/Accelerometer' */
+    sample_model_DW.obj_n.matlabCodegenIsDeleted = false;
+    sample_model_DW.obj_n.isInitialized = 1;
+    INITIALIZE_ACCELEROMETER();
+    sample_model_DW.obj_n.isSetupComplete = true;
 
-  /* Start for MATLABSystem: '<S4>/Accelerometer' */
-  sample_model_DW.obj_n.matlabCodegenIsDeleted = false;
-  sample_model_DW.obj_n.isInitialized = 1;
-  INITIALIZE_ACCELEROMETER();
-  sample_model_DW.obj_n.isSetupComplete = true;
+    /* Start for MATLABSystem: '<S1>/DataDisplay' */
+    INITIALIZE_DATADISPLAY();
 
-  /* Start for MATLABSystem: '<S1>/DataDisplay' */
-  INITIALIZE_DATADISPLAY();
+    /* Start for MATLABSystem: '<S2>/DataDisplay' */
+    INITIALIZE_DATADISPLAY();
 
-  /* Start for MATLABSystem: '<S2>/DataDisplay' */
-  INITIALIZE_DATADISPLAY();
+    /* Start for MATLABSystem: '<S3>/DataDisplay' */
+    INITIALIZE_DATADISPLAY();
 
-  /* Start for MATLABSystem: '<S3>/DataDisplay' */
-  INITIALIZE_DATADISPLAY();
+    /* Start for MATLABSystem: '<Root>/TCP//IP Send' */
+    sample_model_DW.obj.errorNo_ = 0;
+    sample_model_DW.obj.isInitialized = 0;
+    sample_model_SystemCore_setup(&sample_model_DW.obj);
 
-  /* Start for MATLABSystem: '<Root>/TCP//IP Send' */
-  sample_model_DW.obj.errorNo_ = 0;
-  sample_model_DW.obj.isInitialized = 0;
-  sample_model_SystemCore_setup(&sample_model_DW.obj);
+    /* Start for MATLABSystem: '<Root>/ThingSpeak Write' */
+    for (i = 0; i < 17; i++) {
+      sample_model_B.b[i] = tmp[i];
+    }
 
-  /* Start for MATLABSystem: '<S12>/Location Sensor' */
-  sample_model_DW.obj_c.matlabCodegenIsDeleted = false;
-  sample_model_DW.obj_c.isInitialized = 1;
-  INIT_LOCATION_SENSOR();
-  sample_model_DW.obj_c.isSetupComplete = true;
+    INIT_THINGSPEAK_WRITE(1.0, 2.272726E+6, &sample_model_B.b[0], 30.0);
 
-  /* Start for MATLABSystem: '<S5>/DataDisplay' */
-  INITIALIZE_DATADISPLAY();
+    /* End of Start for MATLABSystem: '<Root>/ThingSpeak Write' */
 
-  /* Start for MATLABSystem: '<S11>/DataDisplay' */
-  INITIALIZE_DATADISPLAY();
+    /* Start for MATLABSystem: '<S11>/Location Sensor' */
+    sample_model_DW.obj_c.matlabCodegenIsDeleted = false;
+    sample_model_DW.obj_c.isInitialized = 1;
+    INIT_LOCATION_SENSOR();
+    sample_model_DW.obj_c.isSetupComplete = true;
 
-  /* Start for MATLABSystem: '<S13>/DataDisplay' */
-  INITIALIZE_DATADISPLAY();
+    /* Start for MATLABSystem: '<S5>/DataDisplay' */
+    INITIALIZE_DATADISPLAY();
 
-  /* Start for MATLABSystem: '<S10>/MATLAB System' */
-  sample_model_DW.obj_h.matlabCodegenIsDeleted = false;
-  sample_model_DW.obj_h.isInitialized = 1;
-  INITIALIZE_GYROSCOPE();
-  sample_model_DW.obj_h.isSetupComplete = true;
+    /* Start for MATLABSystem: '<S10>/DataDisplay' */
+    INITIALIZE_DATADISPLAY();
 
-  /* Start for MATLABSystem: '<S6>/DataDisplay' */
-  INITIALIZE_DATADISPLAY();
+    /* Start for MATLABSystem: '<S12>/DataDisplay' */
+    INITIALIZE_DATADISPLAY();
 
-  /* Start for MATLABSystem: '<S7>/DataDisplay' */
-  INITIALIZE_DATADISPLAY();
+    /* Start for MATLABSystem: '<S9>/MATLAB System' */
+    sample_model_DW.obj_h.matlabCodegenIsDeleted = false;
+    sample_model_DW.obj_h.isInitialized = 1;
+    INITIALIZE_GYROSCOPE();
+    sample_model_DW.obj_h.isSetupComplete = true;
 
-  /* Start for MATLABSystem: '<S8>/DataDisplay' */
-  INITIALIZE_DATADISPLAY();
+    /* Start for MATLABSystem: '<S6>/DataDisplay' */
+    INITIALIZE_DATADISPLAY();
+
+    /* Start for MATLABSystem: '<S7>/DataDisplay' */
+    INITIALIZE_DATADISPLAY();
+
+    /* Start for MATLABSystem: '<S8>/DataDisplay' */
+    INITIALIZE_DATADISPLAY();
+  }
 }
 
 /* Model terminate function */
@@ -411,19 +416,19 @@ void sample_model_terminate(void)
 
   /* End of Terminate for MATLABSystem: '<S4>/Accelerometer' */
 
-  /* Terminate for MATLABSystem: '<S12>/Location Sensor' */
+  /* Terminate for MATLABSystem: '<S11>/Location Sensor' */
   if (!sample_model_DW.obj_c.matlabCodegenIsDeleted) {
     sample_model_DW.obj_c.matlabCodegenIsDeleted = true;
   }
 
-  /* End of Terminate for MATLABSystem: '<S12>/Location Sensor' */
+  /* End of Terminate for MATLABSystem: '<S11>/Location Sensor' */
 
-  /* Terminate for MATLABSystem: '<S10>/MATLAB System' */
+  /* Terminate for MATLABSystem: '<S9>/MATLAB System' */
   if (!sample_model_DW.obj_h.matlabCodegenIsDeleted) {
     sample_model_DW.obj_h.matlabCodegenIsDeleted = true;
   }
 
-  /* End of Terminate for MATLABSystem: '<S10>/MATLAB System' */
+  /* End of Terminate for MATLABSystem: '<S9>/MATLAB System' */
 }
 
 /*

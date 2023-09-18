@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'sample_model'.
  *
- * Model version                  : 1.1
+ * Model version                  : 1.2
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Thu Sep 14 22:00:47 2023
+ * C/C++ source code generated on : Sat Sep 16 16:35:03 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -94,7 +94,7 @@ jint JNICALL naMain(JNIEnv *pEnv, jobject pObj, jobjectArray pArgv, jobject
   sample_model_initialize();
 
   /* Call RTOS Initialization function */
-  myRTOSInit(0.001, 0);
+  myRTOSInit(0.1, 0);
 
   /* Wait for stop semaphore */
   MW_sem_wait(&stopSem);

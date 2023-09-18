@@ -161,7 +161,7 @@ public class InfoFragment extends Fragment {
        // Model section displays: Title, model name, camera resolutions (if used)
        tv.setText("");
        tv.append("Name:      " + modelName+ "\n\n");
-       tv.append("Camera resolution:      "+"640x480"+" - (Back)"+"\n\n");       if (awaitedModelInfo!= null && !awaitedModelInfo.isEmpty())
+       if (awaitedModelInfo!= null && !awaitedModelInfo.isEmpty())
            tv.append(awaitedModelInfo);
    }
 
