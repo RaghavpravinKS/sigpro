@@ -38,26 +38,14 @@ public class sample_model extends AppCompatActivity implements OnFragmentInterac
     private AppFragment appFragment;
      FragmentManager fm;
      Fragment current;
-    private LogFragment logFragment;
      private Hashtable<Integer,TextView> textViews = new Hashtable<Integer,TextView>();
-     private float[] mGyroscopeData = { 0.0f, 0.0f, 0.0f };
-     private float[] mAccelerometerData = { 0.0f, 0.0f, 0.0f };
      private SensorManager mSensorManager;
      private GPSHandler mGPSHandler;
-     private Hashtable<Integer, ThingSpeakWrite> thingSpeakBlocks = new Hashtable<>();
     private static final int MY_PERMISSIONS_REQUEST_FINE_LOCATION = 300;
     private boolean isFineLocationPermissionGranted = false;
     private boolean isFineLocationPermissionRequested = false;
-     private String mErrorInfo[];
-     private String mSendBlockNames[];
 
      private void registerSensorManager() {
-        mSensorManager.registerListener(this,
-            mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
-            SensorManager.SENSOR_DELAY_FASTEST);
-        mSensorManager.registerListener(this,
-            mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE),
-            SensorManager.SENSOR_DELAY_FASTEST);
      }
 
     private boolean checkIfAllPermissionsGranted()
@@ -107,8 +95,6 @@ public class sample_model extends AppCompatActivity implements OnFragmentInterac
         current =  navHostFragment;
         appFragment  = (AppFragment) navHostFragment;
         infoFragment  = new InfoFragment();
-        logFragment  = new LogFragment();
-        fm.beginTransaction().add(R.id.nav_host_fragment, logFragment, "3").hide(logFragment).commit();
         fm.beginTransaction().add(R.id.nav_host_fragment, infoFragment, "2").hide(infoFragment).commit();
         fm.beginTransaction().add(R.id.nav_host_fragment, appFragment, "1").commit();
         BottomNavigationView navView = findViewById(R.id.nav_view);
@@ -123,9 +109,6 @@ public class sample_model extends AppCompatActivity implements OnFragmentInterac
         return true;                case R.id.navigation_info:
                 fm.beginTransaction().hide(current).show(infoFragment).commit();
                 current = infoFragment;
-        return true;                case R.id.navigation_log:
-                fm.beginTransaction().hide(current).show(logFragment).commit();
-                current = logFragment;
         return true;                }
                 return false;
                 }
@@ -134,8 +117,6 @@ public class sample_model extends AppCompatActivity implements OnFragmentInterac
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
          mGPSHandler = new GPSHandler(this);
         thisClass = this;
-mErrorInfo = getResources().getStringArray(R.array.error_information);
-mSendBlockNames = getResources().getStringArray(R.array.tcpSendBlockNames);
      }
 
     private sample_model thisClass;
@@ -166,36 +147,6 @@ mSendBlockNames = getResources().getStringArray(R.array.tcpSendBlockNames);
          System.exit(0); //to kill all our threads.
     }
 
-   //Methods for ThingSpeak Write block
-   public void initThingSpeakConnection(int id, int channelID, String writeAPIKey, double updateInterval) {
-       ThingSpeakWrite thingSpeakWrite = new ThingSpeakWrite();
-       thingSpeakWrite.setChannelID(channelID);
-       thingSpeakWrite.setWriteAPIKey(writeAPIKey);
-       thingSpeakWrite.setUpdateInterval(updateInterval);
-       thingSpeakBlocks.put(id, thingSpeakWrite);
-   }
-
-   public int checkUpdateInterval(int id) {
-       ThingSpeakWrite thingSpeakWrite = thingSpeakBlocks.get(id);
-       return (thingSpeakWrite.isSafeToPost() ? 1 : 0);
-   }
-
-   public void addField(int id, int field, double value) {
-       ThingSpeakWrite thingSpeakWrite = thingSpeakBlocks.get(id);
-       thingSpeakWrite.addField(field, value);
-   }
-
-   public void addLocation(int id, double[] location) {
-       ThingSpeakWrite thingSpeakWrite = thingSpeakBlocks.get(id);
-       thingSpeakWrite.addLocation(location);
-   }
-
-   public void sendPostRequest(int id) {
-       ThingSpeakWrite thingSpeakWrite = thingSpeakBlocks.get(id);
-       String response = thingSpeakWrite.sendPostRequest();
-       logFragment.updateLog(response);
-   }
-
 	@Override
     public void onAttachFragment(Fragment fragment) {
         super.onAttachFragment(fragment);
@@ -205,9 +156,6 @@ mSendBlockNames = getResources().getStringArray(R.array.tcpSendBlockNames);
         }
         if (fragment instanceof AppFragment) {
             ((AppFragment)fragment).setFragmentInteractionListener(this);
-        }
-        if (fragment instanceof LogFragment) {
-            this.logFragment = (LogFragment) fragment;
         }
     }
 
@@ -297,7 +245,7 @@ mSendBlockNames = getResources().getStringArray(R.array.tcpSendBlockNames);
 
     public void registerDataDisplays() {
     // bind text views for data display block;
-    for (int i = 1; i <= 9; i++) {
+    for (int i = 1; i <= 1; i++) {
             TextView textView = (TextView) findViewById(
             getResources().getIdentifier("DataDisplay" + i, "id", getPackageName()));
             textViews.put(i, textView);
@@ -314,28 +262,10 @@ mSendBlockNames = getResources().getStringArray(R.array.tcpSendBlockNames);
         //String logMessage = String.format("%d: 0'%g'", event.sensor.getType(), values[0]);
         //Log.d("Sensor Data IN:", logMessage);
         switch(event.sensor.getType()) {
-            case Sensor.TYPE_GYROSCOPE:
-                mGyroscopeData[0] = values[0];
-                mGyroscopeData[1] = values[1];
-                mGyroscopeData[2] = values[2];
-                break;
-            case Sensor.TYPE_ACCELEROMETER:
-                mAccelerometerData[0] = values[0];
-                mAccelerometerData[1] = values[1];
-                mAccelerometerData[2] = values[2];
-                break;
         }
     }
 
     // Get SensorEvent Data throws exception if the data is null
-    public float[] getGyroscopeData() {
-        return mGyroscopeData;
-    }
-
-    public float[] getAccelerometerData() {
-        return mAccelerometerData;
-    }
-
     // Get GPS Data if GPS is enabled. Otherwise return 0,0
     public double[] getGPSData() {
         return mGPSHandler.getLocationData();
@@ -417,18 +347,6 @@ mSendBlockNames = getResources().getStringArray(R.array.tcpSendBlockNames);
             }
         });
     }
-    // Log TCP info
-     public void displayTCPLogs(short errorNo, int blockId, short isReceive, String argument) {
-       if (mErrorInfo != null && mErrorInfo.length >= errorNo) {
-          String errorInfo = mErrorInfo[errorNo];
-          if (isReceive == 0 && blockId >0 && mSendBlockNames.length >= blockId)
-              errorInfo = mSendBlockNames[blockId-1] + errorInfo;
-            if (!argument.equals(""))
-                errorInfo = errorInfo.replace("#argument#",argument);
-            logFragment.updateTCPLog(errorInfo);
-       }
-}
-
     private native int naMain(String[] argv, sample_model pThis);
     private native void naOnAppStateChange(int state);
     static {

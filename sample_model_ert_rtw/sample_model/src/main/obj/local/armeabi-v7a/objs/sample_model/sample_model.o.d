@@ -1,35 +1,29 @@
-C:\Users\ragha\Documents\IITGN\Sem_3\SSRP\Assignment_I\sample_model_ert_rtw\sample_model\src\main/obj/local/armeabi-v7a/objs/sample_model/sample_model.o: \
+C:\Users\Shesh\Downloads\Enigma\SSRP\sigpro\sample_model_ert_rtw\sample_model\src\main/obj/local/armeabi-v7a/objs/sample_model/sample_model.o: \
   ..\sample_model.c \
-  C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\SAMPLE~1\sample_model.h \
-  C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\SAMPLE~1\rtwtypes.h \
+  C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\sample_model.h \
+  C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\rtwtypes.h \
   C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_datadisplay.h \
-  C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_accelerometer.h \
-  C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_gyroscope.h \
   C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_location.h \
-  C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\SHARED~1\include\MW_TCPSendReceive.h \
-  C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_tcp_log.h \
-  C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_thingspeak_write.h \
-  C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\SAMPLE~1\sample_model_types.h \
-  C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\SAMPLE~1\sample_model_private.h
+  C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\sample_model_types.h \
+  C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\rtGetNaN.h \
+  C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\rt_nonfinite.h \
+  C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\sample_model_private.h \
+  C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\rt_defines.h
 
-C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\SAMPLE~1\sample_model.h:
+C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\sample_model.h:
 
-C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\SAMPLE~1\rtwtypes.h:
+C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\rtwtypes.h:
 
 C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_datadisplay.h:
 
-C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_accelerometer.h:
-
-C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_gyroscope.h:
-
 C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_location.h:
 
-C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\SHARED~1\include\MW_TCPSendReceive.h:
+C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\sample_model_types.h:
 
-C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_tcp_log.h:
+C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\rtGetNaN.h:
 
-C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_thingspeak_write.h:
+C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\rt_nonfinite.h:
 
-C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\SAMPLE~1\sample_model_types.h:
+C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\sample_model_private.h:
 
-C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\SAMPLE~1\sample_model_private.h:
+C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\sample_model_ert_rtw\rt_defines.h:

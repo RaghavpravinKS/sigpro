@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'sample_model'.
  *
- * Model version                  : 1.2
+ * Model version                  : 1.5
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Sat Sep 16 16:35:03 2023
+ * C/C++ source code generated on : Sat Sep 30 01:51:54 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -23,15 +23,12 @@
 #define sample_model_COMMON_INCLUDES_
 #include "rtwtypes.h"
 #include "driver_android_datadisplay.h"
-#include "driver_android_accelerometer.h"
-#include "driver_android_gyroscope.h"
 #include "driver_android_location.h"
-#include "MW_TCPSendReceive.h"
-#include "driver_android_tcp_log.h"
-#include "driver_android_thingspeak_write.h"
 #endif                                 /* sample_model_COMMON_INCLUDES_ */
 
 #include "sample_model_types.h"
+#include "rtGetNaN.h"
+#include "rt_nonfinite.h"
 #include <stddef.h>
 
 /* Macros for accessing real-time model data structure */
@@ -43,40 +40,15 @@
 #define rtmSetErrorStatus(rtm, val)    ((rtm)->errorStatus = (val))
 #endif
 
-/* Block signals (default storage) */
-typedef struct {
-  real_T out[3];
-  char_T b[17];
-  char_T str_data[16];
-  char_T b_str_data[16];
-} B_sample_model_T;
-
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  codertarget_internal_androidT_T obj; /* '<Root>/TCP//IP Send' */
-  codertarget_internal_androidA_T obj_n;/* '<S4>/Accelerometer' */
-  codertarget_internal_androidG_T obj_h;/* '<S9>/MATLAB System' */
-  codertarget_internal_androidL_T obj_c;/* '<S11>/Location Sensor' */
+  codertarget_internal_androidL_T obj; /* '<S2>/Location Sensor' */
 } DW_sample_model_T;
 
 /* Real-time Model Data Structure */
 struct tag_RTM_sample_model_T {
   const char_T * volatile errorStatus;
-
-  /*
-   * Timing:
-   * The following substructure contains information regarding
-   * the timing information for the model.
-   */
-  struct {
-    struct {
-      uint8_T TID[2];
-    } TaskCounters;
-  } Timing;
 };
-
-/* Block signals (default storage) */
-extern B_sample_model_T sample_model_B;
 
 /* Block states (default storage) */
 extern DW_sample_model_T sample_model_DW;
@@ -106,18 +78,9 @@ extern volatile boolean_T runModel;
  * Here is the system hierarchy for this model
  *
  * '<Root>' : 'sample_model'
- * '<S1>'   : 'sample_model/Acc - x'
- * '<S2>'   : 'sample_model/Acc - y'
- * '<S3>'   : 'sample_model/Acc - z'
- * '<S4>'   : 'sample_model/Accelerometer'
- * '<S5>'   : 'sample_model/Altitude'
- * '<S6>'   : 'sample_model/Ang. Vel - x'
- * '<S7>'   : 'sample_model/Ang. Vel. - y'
- * '<S8>'   : 'sample_model/Ang. Vel. -z'
- * '<S9>'   : 'sample_model/Gyroscope'
- * '<S10>'  : 'sample_model/Latitude'
- * '<S11>'  : 'sample_model/Location Sensor'
- * '<S12>'  : 'sample_model/Longitude'
+ * '<S1>'   : 'sample_model/Ang. Vel - x1'
+ * '<S2>'   : 'sample_model/Location Sensor'
+ * '<S3>'   : 'sample_model/MATLAB Function'
  */
 #endif                                 /* RTW_HEADER_sample_model_h_ */
 

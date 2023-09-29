@@ -108,10 +108,6 @@ public class InfoFragment extends Fragment {
 
    private void setListOfUnsupportedSensorsInModel() {
         SensorManager mSensorManager= (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
-     if (mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) == null)
-        listOfUnsupportedSensorsInModel.add("Accelerometer");
-     if (mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE) == null)
-        listOfUnsupportedSensorsInModel.add("Gyroscope");
      }
 
     private void setNetworkInfo() {

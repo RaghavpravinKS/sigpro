@@ -9,7 +9,7 @@
  *
  * Model version                  : 1.0
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Thu Sep 14 19:22:26 2023
+ * C/C++ source code generated on : Sat Sep 30 01:36:04 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -23,10 +23,7 @@
 #define untitled_COMMON_INCLUDES_
 #include "rtwtypes.h"
 #include "driver_android_accelerometer.h"
-#include "driver_android_camera.h"
 #include "driver_android_datadisplay.h"
-#include "driver_android_location.h"
-#include "driver_android_videodisplay.h"
 #endif                                 /* untitled_COMMON_INCLUDES_ */
 
 #include "untitled_types.h"
@@ -41,27 +38,15 @@
 #define rtmSetErrorStatus(rtm, val)    ((rtm)->errorStatus = (val))
 #endif
 
-/* Block signals (default storage) */
-typedef struct {
-  uint8_T b_varargout_3[307200];
-  uint8_T b_varargout_2[307200];
-  uint8_T b_varargout_1[307200];
-} B_untitled_T;
-
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
   codertarget_internal_androidA_T obj; /* '<S1>/Accelerometer' */
-  codertarget_internal_androidL_T obj_c;/* '<S4>/Location Sensor' */
-  codertarget_internal_androidC_T obj_d;/* '<S2>/Camera' */
 } DW_untitled_T;
 
 /* Real-time Model Data Structure */
 struct tag_RTM_untitled_T {
   const char_T * volatile errorStatus;
 };
-
-/* Block signals (default storage) */
-extern B_untitled_T untitled_B;
 
 /* Block states (default storage) */
 extern DW_untitled_T untitled_DW;
@@ -75,6 +60,12 @@ extern void untitled_terminate(void);
 extern RT_MODEL_untitled_T *const untitled_M;
 extern volatile boolean_T stopRequested;
 extern volatile boolean_T runModel;
+
+/*-
+ * These blocks were eliminated from the model due to optimizations:
+ *
+ * Block '<Root>/Reshape' : Reshape block reduction
+ */
 
 /*-
  * The generated code includes comments that allow you to trace directly
@@ -92,10 +83,8 @@ extern volatile boolean_T runModel;
  *
  * '<Root>' : 'untitled'
  * '<S1>'   : 'untitled/Accelerometer'
- * '<S2>'   : 'untitled/Camera'
- * '<S3>'   : 'untitled/Data Display'
- * '<S4>'   : 'untitled/Location Sensor'
- * '<S5>'   : 'untitled/Video Display'
+ * '<S2>'   : 'untitled/Data Display'
+ * '<S3>'   : 'untitled/MATLAB Function'
  */
 #endif                                 /* RTW_HEADER_untitled_h_ */
 
