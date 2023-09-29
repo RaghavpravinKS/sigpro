@@ -7,6 +7,9 @@
 	   android:title="App" /><item
 	   android:id="@+id/navigation_info"
 	   android:icon="@drawable/info_active"
-	   android:title="Info" />
+	   android:title="Info" /><item
+	   android:id="@+id/navigation_log"
+	   android:icon="@drawable/log_active"
+	   android:title="Log" />
 
 </menu>

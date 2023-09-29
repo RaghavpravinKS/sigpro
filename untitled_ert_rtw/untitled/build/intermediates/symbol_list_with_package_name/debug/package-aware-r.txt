@@ -66,6 +66,7 @@ animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
 array error_information
+array tcpSendBlockNames
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -191,6 +192,7 @@ attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
 attr buttonTintMode
+attr camera_id
 attr cardBackgroundColor
 attr cardCornerRadius
 attr cardElevation
@@ -829,6 +831,7 @@ attr showRanges
 attr showText
 attr showTextGauge
 attr showTitle
+attr show_fps
 attr shrinkMotionSpec
 attr sid
 attr singleChoiceItemLayout
@@ -1908,13 +1911,14 @@ id all
 id always
 id animateToEnd
 id animateToStart
+id any
 id asConfigured
 id async
 id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id auto_generated_widgets
+id back
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -1924,7 +1928,11 @@ id bold
 id bold_italic
 id bottom
 id bounce
+id btnZoom
 id buttonPanel
+id cameraScopeContainer
+id camera_scope_content
+id camera_scope_layout
 id cancel_button
 id center
 id center_horizontal
@@ -1974,6 +1982,7 @@ id disableHome
 id disablePostScroll
 id disableScroll
 id disjoint
+id dots
 id dragDown
 id dragEnd
 id dragLeft
@@ -2004,6 +2013,7 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
+id front
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2109,6 +2119,7 @@ id nav_view
 id navigation_app
 id navigation_header_container
 id navigation_info
+id navigation_log
 id never
 id noScroll
 id none
@@ -2201,6 +2212,8 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id surface2_view
+id surface_view
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -2327,6 +2340,8 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout auto_generated_widgets
+layout camera_scope_layout
+layout camera_view
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3268,6 +3283,7 @@ styleable BottomAppBar backgroundTint elevation fabAlignmentMode fabAnimationMod
 styleable BottomNavigationView backgroundTint elevation itemBackground itemHorizontalTranslationEnabled itemIconSize itemIconTint itemRippleColor itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable BottomSheetBehavior_Layout android_elevation backgroundTint behavior_draggable behavior_expandedOffset behavior_fitToContents behavior_halfExpandedRatio behavior_hideable behavior_peekHeight behavior_saveFlags behavior_skipCollapsed gestureInsetBottomIgnored shapeAppearance shapeAppearanceOverlay
 styleable ButtonBarLayout allowStacking
+styleable CameraBridgeViewBase camera_id show_fps
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection

@@ -9,7 +9,7 @@
  *
  * Model version                  : 1.0
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Sat Sep 30 01:36:04 2023
+ * C/C++ source code generated on : Sat Sep 30 03:27:41 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -22,8 +22,9 @@
 #ifndef untitled_COMMON_INCLUDES_
 #define untitled_COMMON_INCLUDES_
 #include "rtwtypes.h"
-#include "driver_android_accelerometer.h"
-#include "driver_android_datadisplay.h"
+#include "driver_android_camera.h"
+#include "MW_TCPSendReceive.h"
+#include "driver_android_tcp_log.h"
 #endif                                 /* untitled_COMMON_INCLUDES_ */
 
 #include "untitled_types.h"
@@ -38,15 +39,26 @@
 #define rtmSetErrorStatus(rtm, val)    ((rtm)->errorStatus = (val))
 #endif
 
+/* Block signals (default storage) */
+typedef struct {
+  uint8_T b_varargout_3[307200];
+  uint8_T b_varargout_2[307200];
+  uint8_T b_varargout_1[307200];
+} B_untitled_T;
+
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  codertarget_internal_androidA_T obj; /* '<S1>/Accelerometer' */
+  codertarget_internal_androidT_T obj; /* '<Root>/TCP//IP Send' */
+  codertarget_internal_androidC_T obj_f;/* '<S1>/Camera' */
 } DW_untitled_T;
 
 /* Real-time Model Data Structure */
 struct tag_RTM_untitled_T {
   const char_T * volatile errorStatus;
 };
+
+/* Block signals (default storage) */
+extern B_untitled_T untitled_B;
 
 /* Block states (default storage) */
 extern DW_untitled_T untitled_DW;
@@ -82,9 +94,7 @@ extern volatile boolean_T runModel;
  * Here is the system hierarchy for this model
  *
  * '<Root>' : 'untitled'
- * '<S1>'   : 'untitled/Accelerometer'
- * '<S2>'   : 'untitled/Data Display'
- * '<S3>'   : 'untitled/MATLAB Function'
+ * '<S1>'   : 'untitled/Camera'
  */
 #endif                                 /* RTW_HEADER_untitled_h_ */
 

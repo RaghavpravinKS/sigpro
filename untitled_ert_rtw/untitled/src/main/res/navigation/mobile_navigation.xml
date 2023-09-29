@@ -14,6 +14,10 @@
 	    android:id="@+id/navigation_info"
 	    android:name="com.example.untitled.InfoFragment"
 	    android:label="Info"
-	    tools:layout="@layout/fragment_info" />
+	    tools:layout="@layout/fragment_info" /><fragment 
+	    android:id="@+id/navigation_log"
+	    android:name="com.example.untitled.LogFragment"
+	    android:label="Log"
+	    tools:layout="@layout/fragment_log" />
     
 </navigation>

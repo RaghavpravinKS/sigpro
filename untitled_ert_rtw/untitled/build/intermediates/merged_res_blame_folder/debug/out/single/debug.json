@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_toggleswitchblock.png.flat",
-        "source": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_toggleswitchblock.png"
-    },
-    {
         "merged": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\build\\intermediates\\merged_res\\debug\\drawable_app_active.png.flat",
         "source": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\src\\main\\res\\drawable\\app_active.png"
+    },
+    {
+        "merged": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_toggleswitchblock.png.flat",
+        "source": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_toggleswitchblock.png"
     },
     {
         "merged": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_launcher.png.flat",
@@ -80,6 +80,14 @@
         "source": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\src\\main\\res\\drawable\\bottom_nav.xml"
     },
     {
+        "merged": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\build\\intermediates\\merged_res\\debug\\layout_camera_scope_layout.xml.flat",
+        "source": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\src\\main\\res\\layout\\camera_scope_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\build\\intermediates\\merged_res\\debug\\layout_camera_view.xml.flat",
+        "source": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\src\\main\\res\\layout\\camera_view.xml"
+    },
+    {
         "merged": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\build\\intermediates\\merged_res\\debug\\layout_fragment_app.xml.flat",
         "source": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\src\\main\\res\\layout\\fragment_app.xml"
     },
@@ -146,6 +154,10 @@
     {
         "merged": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\build\\intermediates\\merged_res\\debug\\drawable_background.png.flat",
         "source": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\src\\main\\res\\drawable\\background.png"
+    },
+    {
+        "merged": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\build\\intermediates\\merged_res\\debug\\layout-land_fragment_app.xml.flat",
+        "source": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\src\\main\\res\\layout-land\\fragment_app.xml"
     },
     {
         "merged": "C:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\untitled_ert_rtw\\untitled\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_toggleswitchblock.png.flat",

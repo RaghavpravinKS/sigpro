@@ -53,10 +53,6 @@ public class InfoFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_info, container, false);
 
-        // Initialize list of sensors
-       listOfUnsupportedSensorsInModel = new ArrayList<>();
-       setListOfUnsupportedSensorsInModel();
-
        // Initialize properties when view is created
        setNetworkInfo();
        setDeviceInfo();
@@ -106,11 +102,6 @@ public class InfoFragment extends Fragment {
         mListener.onFragmentResume("Info");
     }
 
-   private void setListOfUnsupportedSensorsInModel() {
-        SensorManager mSensorManager= (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
-     if (mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) == null)
-        listOfUnsupportedSensorsInModel.add("Accelerometer");
-     }
 
     private void setNetworkInfo() {
        WifiManager wifiManager = (WifiManager) getActivity().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
@@ -126,7 +117,6 @@ public class InfoFragment extends Fragment {
 
    private void setDeviceInfo() {
        deviceSerial = Build.SERIAL;
-   deviceUnsupportedSensors = !listOfUnsupportedSensorsInModel.isEmpty() ? listOfUnsupportedSensorsInModel.toString() : "None";
             }
 
    private void setModelInfo() {
@@ -152,14 +142,13 @@ public class InfoFragment extends Fragment {
        tv.setText("");
 
        tv.append("Serial:     "+ deviceSerial + "\n\n");
-       tv.append("Unsupported sensors in model:"+ deviceUnsupportedSensors + "\n\n");
    }
 
    private void displayModelInfo(TextView tv) {
        // Model section displays: Title, model name, camera resolutions (if used)
        tv.setText("");
        tv.append("Name:      " + modelName+ "\n\n");
-       if (awaitedModelInfo!= null && !awaitedModelInfo.isEmpty())
+       tv.append("Camera resolution:      "+"640x480"+" - (Back)"+"\n\n");       if (awaitedModelInfo!= null && !awaitedModelInfo.isEmpty())
            tv.append(awaitedModelInfo);
    }
 
