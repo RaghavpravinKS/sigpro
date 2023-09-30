@@ -8,12 +8,12 @@ This is the repository for our first assignment of the Signals Systems and Rando
 - Pavan Deekshith Doddi
 
 ## Objective of our project
-To design an android/iOS app for child safety monitoring. We aim to create an app that detects any over speeding, accidents and crossing of boundaries of a child riding a bicycle. 
+To design an Android/iOS app for child safety monitoring. We aim to create an app that detects overspeeding, accidents, and crossing of boundaries of a child riding a bicycle. 
 
 ## Simulink Model
-We've created a Simulink model which takes input from phone's sensor and uses it to detect crash and overspeed detection of the bicycle. 
+We've created a Simulink model that takes input from the phone's sensor and uses it to detect crashes and overspeed detection of the bicycle. 
 
-It continuously monitors the data from various sensors such as Gyroscope, Accelerometer, GPS sensor, Camera and microphone to get a sense of what's really happening around the phone. 
+It continuously monitors the data from various sensors such as Gyroscope, Accelerometer, GPS sensor, Camera, and microphone to get a sense of what's happening around the phone. 
 
 ## Challenges faced
 While we started to solve our problem statement, we encountered many 
