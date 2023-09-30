@@ -9,7 +9,7 @@
  *
  * Model version                  : 1.0
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Sat Sep 30 15:13:31 2023
+ * C/C++ source code generated on : Sat Sep 30 16:08:33 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -23,7 +23,6 @@
 #define untitled1_COMMON_INCLUDES_
 #include "rtwtypes.h"
 #include "driver_android_camera.h"
-#include "driver_android_datadisplay.h"
 #include "MW_TCPSendReceive.h"
 #include "driver_android_tcp_log.h"
 #endif                                 /* untitled1_COMMON_INCLUDES_ */
@@ -45,15 +44,11 @@ typedef struct {
   uint8_T b_varargout_3[25344];
   uint8_T b_varargout_2[25344];
   uint8_T b_varargout_1[25344];
-  uint8_T y_d[25344];                  /* '<Root>/MATLAB Function3' */
-  real32_T outData[80];
 } B_untitled1_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
   codertarget_internal_androidT_T obj; /* '<Root>/TCP//IP Send2' */
-  codertarget_internal_androidT_T obj_l;/* '<Root>/TCP//IP Send1' */
-  codertarget_internal_androidT_T obj_b;/* '<Root>/TCP//IP Send' */
 } DW_untitled1_T;
 
 /* Real-time Model Data Structure */
@@ -93,10 +88,7 @@ extern volatile boolean_T runModel;
  *
  * '<Root>' : 'untitled1'
  * '<S1>'   : 'untitled1/Camera'
- * '<S2>'   : 'untitled1/Data Display'
- * '<S3>'   : 'untitled1/MATLAB Function1'
- * '<S4>'   : 'untitled1/MATLAB Function2'
- * '<S5>'   : 'untitled1/MATLAB Function3'
+ * '<S2>'   : 'untitled1/MATLAB Function3'
  */
 #endif                                 /* RTW_HEADER_untitled1_h_ */
 

@@ -9,7 +9,7 @@
  *
  * Model version                  : 1.0
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Sat Sep 30 15:13:31 2023
+ * C/C++ source code generated on : Sat Sep 30 16:08:33 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -94,7 +94,7 @@ jint JNICALL naMain(JNIEnv *pEnv, jobject pObj, jobjectArray pArgv, jobject
   untitled1_initialize();
 
   /* Call RTOS Initialization function */
-  myRTOSInit(1.0, 0);
+  myRTOSInit(0.1, 0);
 
   /* Wait for stop semaphore */
   MW_sem_wait(&stopSem);

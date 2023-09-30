@@ -6613,7 +6613,7 @@
         <item> : Cannot resolve the host name #argument# to IP address. Change the Remote address block parameter and deploy the model again.\n\n</item>
         <item> : Server could not be created. Restart the app.\n\n</item>
         <item> : Client could not be created. Restart the app.\n\n</item>       
-    </string-array><string-array name="tcpSendBlockNames">		<item>TCP/IP Send</item>		<item>TCP/IP Send1</item>		<item>TCP/IP Send2</item>	</string-array></file><file path="C:\Users\ragha\Documents\IITGN\Sem_3\SSRP\Assignment_I\untitled1_ert_rtw\untitled1\src\main\res\values\styles.xml" qualifiers=""><style name="MWAppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    </string-array><string-array name="tcpSendBlockNames">		<item>TCP/IP Send2</item>	</string-array></file><file path="C:\Users\ragha\Documents\IITGN\Sem_3\SSRP\Assignment_I\untitled1_ert_rtw\untitled1\src\main\res\values\styles.xml" qualifiers=""><style name="MWAppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="android:textColorSecondary">@color/dim_foreground_material_dark</item>
         <item name="colorAccent">@color/colorAccent</item>

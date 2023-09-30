@@ -1918,7 +1918,6 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id auto_generated_widgets
 id back
 id barrier
 id baseline

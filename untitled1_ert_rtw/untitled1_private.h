@@ -9,7 +9,7 @@
  *
  * Model version                  : 1.0
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Sat Sep 30 15:13:31 2023
+ * C/C++ source code generated on : Sat Sep 30 16:08:33 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -21,11 +21,8 @@
 #define RTW_HEADER_untitled1_private_h_
 #include "rtwtypes.h"
 #include "untitled1_types.h"
-#include "untitled1.h"
 
 extern real_T rt_roundd_snf(real_T u);
-extern void untitled1_MATLABFunction1(const uint8_T rtu_u[25344], uint8_T rty_y
-  [25344]);
 
 #endif                                 /* RTW_HEADER_untitled1_private_h_ */
 

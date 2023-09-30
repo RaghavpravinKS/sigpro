@@ -6,7 +6,6 @@ C:\Users\ragha\Documents\IITGN\Sem_3\SSRP\Assignment_I\untitled1_ert_rtw\untitle
   C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\UNTITL~2\untitled1.h \
   C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\UNTITL~2\rtwtypes.h \
   C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_camera.h \
-  C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_datadisplay.h \
   C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\SHARED~1\include\MW_TCPSendReceive.h \
   D:\SDKs\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\errno.h \
   D:\SDKs\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\limits.h \
@@ -29,8 +28,6 @@ C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\UNTITL~2\untitled1.h:
 C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\UNTITL~2\rtwtypes.h:
 
 C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_camera.h:
-
-C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\driver_android_datadisplay.h:
 
 C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\SHARED~1\include\MW_TCPSendReceive.h:
 
