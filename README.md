@@ -51,22 +51,22 @@ So, to observe them, we must first remove the noise. After spending hours smooth
 #### Filtered data from the accelerometer:
 Trip 1             |  Trip 2
 :-------------------------:|:-------------------------:
-![image](Data/Matlab_Data/Figures/Raw_Data_Figures/Acceleration/a1.jpg) | ![image](Data/Matlab_Data/Figures/Raw_Data_Figures/Acceleration/a2.jpg)
+![image](Data/Matlab_Data/Figures/Filtered_Data_Figures/Acceleration/a1.jpg) | ![image](Data/Matlab_Data/Figures/Filtered_Data_Figures/Acceleration/a2.jpg)
 
 #### Filtered data from magnetometer:
 Trip 1             |  Trip 2
 :-------------------------:|:-------------------------:
-![image](Data/Matlab_Data/Figures/Raw_Data_Figures/Magnetic_Field/m1.jpg) | ![image](Data/Matlab_Data/Figures/Raw_Data_Figures/Magnetic_Field/m2.jpg)
+![image](Data/Matlab_Data/Figures/Filtered_Data_Figures/Magnetic_Field/m1.jpg) | ![image](Data/Matlab_Data/Figures/Filtered_Data_Figures/Magnetic_Field/m2.jpg)
 
 #### Filtered data from gyroscope:
 Trip 1             |  Trip 2
 :-------------------------:|:-------------------------:
-![image](Data/Matlab_Data/Figures/Raw_Data_Figures/Angular_Velocity/v1.jpg) | ![image](Data/Matlab_Data/Figures/Raw_Data_Figures/Angular_Velocity/v2.jpg)
+![image](Data/Matlab_Data/Figures/Filtered_Data_Figures/Angular_velocity/v1.jpg) | ![image](Data/Matlab_Data/Figures/Filtered_Data_Figures/Angular_velocity/v2.jpg)
 
 #### Filtered data from GPS sensor:
 Trip 1             |  Trip 2
 :-------------------------:|:-------------------------:
-![image](Data/Matlab_Data/Figures/Raw_Data_Figures/Orientation/o1.jpg) | ![image](Data/Matlab_Data/Figures/Raw_Data_Figures/Orientation/o2.jpg)
+![image](Data/Matlab_Data/Figures/Filtered_Data_Figures/Orientation/o1.jpg) | ![image](Data/Matlab_Data/Figures/Filtered_Data_Figures/Orientation/o2.jpg)
 
 
 ### Observations from data
