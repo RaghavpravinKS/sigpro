@@ -15,8 +15,8 @@ import android.app.AlertDialog;
 import android.app.Activity;
 
 public class CameraView extends JavaCameraView {
-    private int mCameraWidth = 176;
-    private int mCameraHeight = 144;
+    private int mCameraWidth = 640;
+    private int mCameraHeight = 480;
     private int mCameraLocation = org.opencv.android.CameraBridgeViewBase.CAMERA_ID_BACK;
 
     public class SetupException extends Exception {
@@ -67,32 +67,6 @@ public class CameraView extends JavaCameraView {
                throw new SetupException(message);
            }
        }
-    }
-
-    protected boolean initializeCamera(int width, int height) {
-    	boolean ret = super.initializeCamera(width, height);
-    	if (ret) {
-            List<Size> resolutions = mCamera.getParameters().getSupportedPreviewSizes();
-            ListIterator<Size> resolutionsItr = resolutions.listIterator();
-            boolean found = false;
-            while (resolutionsItr.hasNext() && !found) {
-                Size resolution = resolutionsItr.next();
-                found = (resolution.height == mCameraHeight) && (resolution.width == mCameraWidth);
-            }
-            if (found)
-                return ret;
-            resolutions = mCamera.getParameters().getSupportedPictureSizes();
-            resolutionsItr = resolutions.listIterator();
-            while (resolutionsItr.hasNext() && !found) {
-                Size resolution = resolutionsItr.next();
-                found = (resolution.height == mCameraHeight) && (resolution.width == mCameraWidth);
-            }
-            if (!found) {
-                String message = String.format("Resolution requested: %d x %d is not supported by the Back Camera.", mCameraWidth, mCameraHeight);
-               showAlert(message);
-            }    		
-    	}
-    	return ret;
     }
 
     public void showAlert(final String inMessage) {

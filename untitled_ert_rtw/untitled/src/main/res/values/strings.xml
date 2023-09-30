@@ -25,8 +25,11 @@
         <item> : Client could not be created. Restart the app.\n\n</item>       
     </string-array>   
 <!-- Auto Generated strings start-->
-	<string-array name="tcpSendBlockNames">		<item>TCP/IP Send</item>		<item>TCP/IP Send1</item>		<item>TCP/IP Send2</item>	</string-array>
+
+	<string-array name="tcpReceiveBlockNames">		<item>TCP/IP Receive</item>	</string-array>
 <!-- Auto Generated strings end-->
+
+
 
 
 

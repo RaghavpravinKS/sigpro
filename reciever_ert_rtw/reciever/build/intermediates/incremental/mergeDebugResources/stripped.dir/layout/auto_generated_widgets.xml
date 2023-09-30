@@ -24,7 +24,7 @@
 	android:layout_weight="1"
 	android:ellipsize="marquee"
 	android:textStyle="bold"
-	android:text="Data Display: "
+	android:text="Current Lattitude of child: "
 	android:textColor="@android:color/black"
 	android:layout_height="wrap_content"
 	android:layout_width="match_parent"
@@ -54,7 +54,7 @@
 	android:layout_weight="1"
 	android:ellipsize="marquee"
 	android:textStyle="bold"
-	android:text="Data Display1: "
+	android:text="Current Longitude of child: "
 	android:textColor="@android:color/black"
 	android:layout_height="wrap_content"
 	android:layout_width="match_parent"
@@ -73,9 +73,113 @@
 	android:layout_width="match_parent"
 	android:background="@drawable/divider"
 	android:layout_height="@dimen/divider_height"/>
+<LinearLayout
+	android:layout_width="match_parent"
+	android:layout_margin="8dp"
+	android:layout_height="wrap_content">
+	<TextView
+	android:id="@+id/DataDisplayLabel3"
+	
+	android:layout_gravity="left"
+	android:layout_weight="1"
+	android:ellipsize="marquee"
+	android:textStyle="bold"
+	android:text="Current Speed of child: "
+	android:textColor="@android:color/black"
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	/>
+<TextView
+	android:id="@+id/DataDisplay3"
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	
+	android:layout_weight="1"
+	android:layout_gravity="right"
+	android:textColor="@android:color/black"
+	/>
+	</LinearLayout>
+	<View
+	android:layout_width="match_parent"
+	android:background="@drawable/divider"
+	android:layout_height="@dimen/divider_height"/>
+<LinearLayout
+	android:layout_width="match_parent"
+	android:layout_margin="8dp"
+	android:layout_height="wrap_content">
+	<TextView
+	android:id="@+id/DataDisplayLabel4"
+	
+	android:layout_gravity="left"
+	android:layout_weight="1"
+	android:ellipsize="marquee"
+	android:textStyle="bold"
+	android:text="Current distance of child from home: "
+	android:textColor="@android:color/black"
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	/>
+<TextView
+	android:id="@+id/DataDisplay4"
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	
+	android:layout_weight="1"
+	android:layout_gravity="right"
+	android:textColor="@android:color/black"
+	/>
+	</LinearLayout>
+	<View
+	android:layout_width="match_parent"
+	android:background="@drawable/divider"
+	android:layout_height="@dimen/divider_height"/>
+<LinearLayout
+	android:layout_width="match_parent"
+	android:layout_margin="8dp"
+	android:layout_height="wrap_content">
+	<TextView
+	android:id="@+id/DataDisplayLabel5"
+	
+	android:layout_gravity="left"
+	android:layout_weight="1"
+	android:ellipsize="marquee"
+	android:textStyle="bold"
+	android:text="Met with an accident => 1            Riding safely =>  0: "
+	android:textColor="@android:color/black"
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	/>
+<TextView
+	android:id="@+id/DataDisplay5"
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	
+	android:layout_weight="1"
+	android:layout_gravity="right"
+	android:textColor="@android:color/black"
+	/>
+	</LinearLayout>
+	<View
+	android:layout_width="match_parent"
+	android:background="@drawable/divider"
+	android:layout_height="@dimen/divider_height"/>
 </LinearLayout>
 </ScrollView>
 <!-- Auto-generated Widgets END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

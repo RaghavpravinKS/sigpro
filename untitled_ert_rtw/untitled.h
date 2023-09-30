@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'untitled'.
  *
- * Model version                  : 1.2
+ * Model version                  : 1.0
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Sat Sep 30 15:12:43 2023
+ * C/C++ source code generated on : Sat Sep 30 18:51:43 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -22,10 +22,9 @@
 #ifndef untitled_COMMON_INCLUDES_
 #define untitled_COMMON_INCLUDES_
 #include "rtwtypes.h"
-#include "driver_android_camera.h"
-#include "driver_android_datadisplay.h"
 #include "MW_TCPSendReceive.h"
 #include "driver_android_tcp_log.h"
+#include "driver_android_videodisplay.h"
 #endif                                 /* untitled_COMMON_INCLUDES_ */
 
 #include "untitled_types.h"
@@ -42,18 +41,12 @@
 
 /* Block signals (default storage) */
 typedef struct {
-  uint8_T b_varargout_3[25344];
-  uint8_T b_varargout_2[25344];
-  uint8_T b_varargout_1[25344];
-  uint8_T y_f[25344];                  /* '<Root>/MATLAB Function3' */
-  real32_T outData[80];
+  uint8_T u0_tmp[101376];
 } B_untitled_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  codertarget_internal_androidT_T obj; /* '<Root>/TCP//IP Send2' */
-  codertarget_internal_androidT_T obj_n;/* '<Root>/TCP//IP Send1' */
-  codertarget_internal_androidT_T obj_m;/* '<Root>/TCP//IP Send' */
+  codertarget_internal_androidT_T obj; /* '<Root>/TCP//IP Receive' */
 } DW_untitled_T;
 
 /* Real-time Model Data Structure */
@@ -92,11 +85,9 @@ extern volatile boolean_T runModel;
  * Here is the system hierarchy for this model
  *
  * '<Root>' : 'untitled'
- * '<S1>'   : 'untitled/Camera'
- * '<S2>'   : 'untitled/Data Display'
- * '<S3>'   : 'untitled/MATLAB Function1'
- * '<S4>'   : 'untitled/MATLAB Function2'
- * '<S5>'   : 'untitled/MATLAB Function3'
+ * '<S1>'   : 'untitled/MATLAB Function'
+ * '<S2>'   : 'untitled/MATLAB Function1'
+ * '<S3>'   : 'untitled/Video Display'
  */
 #endif                                 /* RTW_HEADER_untitled_h_ */
 

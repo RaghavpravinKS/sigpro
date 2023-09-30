@@ -26,7 +26,28 @@
     </string-array>   
 <!-- Auto Generated strings start-->
 
+	<string-array name="tcpReceiveBlockNames">		<item>TCP/IP Receive</item>		<item>TCP/IP Receive1</item>		<item>TCP/IP Receive2</item>	</string-array>
 <!-- Auto Generated strings end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

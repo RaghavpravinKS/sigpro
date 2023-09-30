@@ -63,10 +63,10 @@ public class LogFragment extends Fragment {
        tcpLogTitle = (TextView)rootView.findViewById(R.id.tcplogtitle);
        thingSpeakLog.setMovementMethod(new ScrollingMovementMethod());
        tcpLog.setMovementMethod(new ScrollingMovementMethod());
-       thingSpeakLog.setVisibility((1== 1)? View.VISIBLE : View.GONE);
-       thingSpeakLogTitle.setVisibility((1==1)? View.VISIBLE : View.GONE);
-       tcpLogTitle.setVisibility((0==1) ? View.VISIBLE : View.GONE);
-       tcpLog.setVisibility((0== 1)? View.VISIBLE : View.GONE);
+       thingSpeakLog.setVisibility((0== 1)? View.VISIBLE : View.GONE);
+       thingSpeakLogTitle.setVisibility((0==1)? View.VISIBLE : View.GONE);
+       tcpLogTitle.setVisibility((1==1) ? View.VISIBLE : View.GONE);
+       tcpLog.setVisibility((1== 1)? View.VISIBLE : View.GONE);
        if (tcpLogBuilder == null)
            tcpLogBuilder = new StringBuilder("");
        if(ThingSpeakLogtext == null)

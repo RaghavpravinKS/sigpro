@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'reciever'.
  *
- * Model version                  : 1.2
+ * Model version                  : 1.1
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Sat Sep 16 16:35:17 2023
+ * C/C++ source code generated on : Sat Sep 30 19:39:14 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -94,7 +94,7 @@ jint JNICALL naMain(JNIEnv *pEnv, jobject pObj, jobjectArray pArgv, jobject
   reciever_initialize();
 
   /* Call RTOS Initialization function */
-  myRTOSInit(30.0, 0);
+  myRTOSInit(2.2675736961451248E-5, 0);
 
   /* Wait for stop semaphore */
   MW_sem_wait(&stopSem);

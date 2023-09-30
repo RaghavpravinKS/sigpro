@@ -21,7 +21,7 @@ jmethodID terminateMessageID;
 
 extern jint JNICALL naMain(JNIEnv *pEnv, jobject pObj, jobjectArray pArgv, jobject pMainActivity);
 
-
+extern void onAudioPlaybackStateChange(int i);
 
 void JNICALL naOnAppStateChange(JNIEnv *pEnv, jobject pObj, jint state)
 {
@@ -42,10 +42,10 @@ void JNICALL naOnAppStateChange(JNIEnv *pEnv, jobject pObj, jint state)
             /*ONSTART CALLS GOES HERE*/
             break;
         case 3:
-            
+            onAudioPlaybackStateChange(3);
             break;
         case 4:
-            
+            onAudioPlaybackStateChange(4);
             break;
         case 5:
             /*ONSTOP CALLS GOES HERE*/

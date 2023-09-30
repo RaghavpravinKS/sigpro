@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'reciever'.
  *
- * Model version                  : 1.2
+ * Model version                  : 1.1
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Sat Sep 16 16:35:17 2023
+ * C/C++ source code generated on : Sat Sep 30 19:39:14 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -21,6 +21,9 @@
 #define RTW_HEADER_reciever_private_h_
 #include "rtwtypes.h"
 #include "reciever_types.h"
+
+extern real_T rt_roundd_snf(real_T u);
+
 #endif                                 /* RTW_HEADER_reciever_private_h_ */
 
 /*
