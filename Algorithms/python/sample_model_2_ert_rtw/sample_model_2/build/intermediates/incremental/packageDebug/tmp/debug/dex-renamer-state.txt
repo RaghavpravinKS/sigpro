@@ -1,0 +1,4 @@
+#Sat Sep 30 15:35:35 IST 2023
+base.0=C\:\\Users\\Shesh\\Downloads\\Enigma\\SSRP\\sigpro\\Algorithms\\python\\sample_model_2_ert_rtw\\sample_model_2\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

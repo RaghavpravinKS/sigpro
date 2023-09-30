@@ -1,0 +1,47 @@
+com/example/untitled1/databinding/FragmentLogBinding.java
+ com.example.untitled1.databinding.FragmentLogBinding
+com/example/untitled1/databinding/CameraViewBinding.java
+ com.example.untitled1.databinding.CameraViewBinding
+com/example/untitled1/untitled1.java
+ com.example.untitled1.untitled1
+ com.example.untitled1.untitled1$1
+ com.example.untitled1.untitled1$2
+ com.example.untitled1.untitled1$3
+ com.example.untitled1.untitled1$4
+com/example/untitled1/CameraScopeSectionsPagerAdapter.java
+ com.example.untitled1.CameraScopeSectionsPagerAdapter
+com/example/untitled1/Camera2View.java
+ com.example.untitled1.Camera2View
+ com.example.untitled1.Camera2View$1
+ com.example.untitled1.Camera2View$1$1
+ com.example.untitled1.Camera2View$SetupException
+com/example/untitled1/BuildConfig.java
+ com.example.untitled1.BuildConfig
+com/example/untitled1/LogFragment.java
+ com.example.untitled1.LogFragment
+ com.example.untitled1.LogFragment$1
+ com.example.untitled1.LogFragment$2
+com/example/untitled1/databinding/CameraScopeLayoutBinding.java
+ com.example.untitled1.databinding.CameraScopeLayoutBinding
+com/example/untitled1/databinding/FragmentInfoBinding.java
+ com.example.untitled1.databinding.FragmentInfoBinding
+com/example/untitled1/databinding/FragmentAppBinding.java
+ com.example.untitled1.databinding.FragmentAppBinding
+com/example/untitled1/AppFragment.java
+ com.example.untitled1.AppFragment
+ com.example.untitled1.AppFragment$1
+ com.example.untitled1.AppFragment$2
+ com.example.untitled1.AppFragment$3
+com/example/untitled1/OnFragmentInteractionListener.java
+ com.example.untitled1.OnFragmentInteractionListener
+com/example/untitled1/CameraView.java
+ com.example.untitled1.CameraView
+ com.example.untitled1.CameraView$1
+ com.example.untitled1.CameraView$1$1
+ com.example.untitled1.CameraView$SetupException
+com/example/untitled1/databinding/ActivityMainBinding.java
+ com.example.untitled1.databinding.ActivityMainBinding
+com/example/untitled1/InfoFragment.java
+ com.example.untitled1.InfoFragment
+com/example/untitled1/CameraScopeFragment.java
+ com.example.untitled1.CameraScopeFragment
