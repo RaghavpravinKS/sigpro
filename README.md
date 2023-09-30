@@ -29,7 +29,7 @@ DAta from GPS sensor:
 So to observe them we must first remove the noise. After spending hours on smoothing and cleansing the data we arrived at this quality:
 
 Data from accelerometer:
-
+![image]()
 Data from magnetometer:
 
 Data from gyroscope:
@@ -37,9 +37,14 @@ Data from gyroscope:
 Data from GPS sensor:
 
 ### Observations from data
-As you can see from the above data, when a person is riding a bicycle his/her leg goes up and down in an almost periodic manner to pedal the cycle. Due to this periodic motion of legs we can observe a nice sinusoidal like pattern in almost all sensors' data. But this is not the part of data we are interested in, we want to find and detect some special features corresponding to a fall or accident; when we observe the data after the end of those sinusoidal like waveforms those are the ones corresponding to the activities that happened after the cycle stopped. As we were the ones collecting the data, we also recoreded a video to to keep track of the timeline.
-Inorder to detect a fall or accident one has to focus on this part of the signal and try to extract some useful features. By keen observation we concluded there is a sudden surge in accelerations and angular velocities provided by the gyroscope and accelerometer. Now our goal is to set some threshold value to detect this sudden surge in change of these values. The naive approach to these kind of problems is setting a value by observing the reading from the data above and testing it for tweaking it. But his approach may not work in all scenarios. Our approach is a bit extended version of this idea.
-What we did was, we wanted our threshold value to be adjusted according to the surrounding according to the changes in parameters of the surroundings. So we employed a moing average average filter and
+- As you can see from the above data, when a person is riding a bicycle his/her leg goes up and down in an almost periodic manner to pedal the cycle. Due to this periodic motion of legs we can observe a nice sinusoidal like pattern in almost all sensors' data.
+- But this is not the part of data we are interested in, we want to find and detect some special features corresponding to a fall or accident; when we observe the data after the end of those sinusoidal like waveforms those are the ones corresponding to the activities that happened after the cycle stopped.
+- As we were the ones collecting the data, we also recoreded a video to to keep track of the timeline.
+- Inorder to detect a fall or accident one has to focus on this part of the signal and try to extract some useful features. By keen observation we concluded there is a sudden surge in accelerations and angular velocities provided by the gyroscope and accelerometer.
+### Methods to detect fall
+- Now our goal is to set some threshold value to detect this sudden surge in change of these values. The naive approach to these kind of problems is setting a value by observing the reading from the data above and testing it for tweaking it. But his approach may not work in all scenarios.
+- Our approach is a bit extended version of this idea. What we did was, we wanted our threshold value to be adjusted according to the surrounding according to the changes in parameters of the surroundings. So we employed a moing average average filter and standard deviation.
+- So our value of threshold continuosly changes to adapt the changes that taking place in the environment, for example when the road 
 
 ## Challenges faced
 While we started to solve our problem statement, we encountered many problems
