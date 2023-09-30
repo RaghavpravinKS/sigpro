@@ -15,8 +15,8 @@ import android.app.AlertDialog;
 import android.app.Activity;
 
 public class CameraView extends JavaCameraView {
-    private int mCameraWidth = 640;
-    private int mCameraHeight = 480;
+    private int mCameraWidth = 176;
+    private int mCameraHeight = 144;
     private int mCameraLocation = org.opencv.android.CameraBridgeViewBase.CAMERA_ID_BACK;
 
     public class SetupException extends Exception {

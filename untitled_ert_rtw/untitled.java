@@ -39,6 +39,8 @@ import android.widget.ImageButton;
 import android.os.CountDownTimer;
 import android.os.Build;
 import androidx.core.content.res.ResourcesCompat;
+import android.widget.TextView;
+import java.util.Hashtable;
 
 public class untitled extends AppCompatActivity implements OnFragmentInteractionListener , CvCameraViewListener2 {
     private InfoFragment infoFragment;
@@ -46,6 +48,7 @@ public class untitled extends AppCompatActivity implements OnFragmentInteraction
      FragmentManager fm;
      Fragment current;
     private LogFragment logFragment;
+     private Hashtable<Integer,TextView> textViews = new Hashtable<Integer,TextView>();
     private static final int MY_PERMISSIONS_REQUEST_CAMERA = 100;
     private boolean isCameraPermissionGranted = false;
     private boolean isCameraPermissionRequested = false;
@@ -322,6 +325,7 @@ mSendBlockNames = getResources().getStringArray(R.array.tcpSendBlockNames);
     public void onFragmentResume(String name) {
         switch (name) {
             case "App":
+                registerDataDisplays();
                 break;
            case "dot1":
               if (hasCamera2Support) {
@@ -400,6 +404,90 @@ mSendBlockNames = getResources().getStringArray(R.array.tcpSendBlockNames);
         }
     }
 
+    public void registerDataDisplays() {
+    // bind text views for data display block;
+    for (int i = 1; i <= 1; i++) {
+            TextView textView = (TextView) findViewById(
+            getResources().getIdentifier("DataDisplay" + i, "id", getPackageName()));
+            textViews.put(i, textView);
+        }
+    }
+    public void displayText(int id, byte[] data, byte[] format) {
+        String formatString = new String(format);
+        String toDisplay = String.format(formatString, data[0]);
+        if (data.length > 1) {
+            for (int i = 1; i < data.length; i++)
+                toDisplay += "\n" + String.format(formatString, data[i]);
+        }
+        updateTextViewById(id, toDisplay);
+    }
+
+    public void displayText(int id, short[] data, byte[] format) {
+        String formatString = new String(format);
+        String toDisplay = String.format(formatString, data[0]);
+        if (data.length > 1) {
+            for (int i = 1; i < data.length; i++)
+                toDisplay += "\n" + String.format(formatString, data[i]);
+        }
+        updateTextViewById(id, toDisplay);
+    }
+
+    public void displayText(int id, int[] data, byte[] format) {
+        String formatString = new String(format);
+        String toDisplay = String.format(formatString, data[0]);
+        if (data.length > 1) {
+            for (int i = 1; i < data.length; i++)
+                toDisplay += "\n" + String.format(formatString, data[i]);
+        }
+        updateTextViewById(id, toDisplay);
+    }
+
+    public void displayText(int id, long[] data, byte[] format) {
+        String formatString = new String(format);
+        String toDisplay = String.format(formatString, data[0]);
+        if (data.length > 1) {
+            for (int i = 1; i < data.length; i++)
+                toDisplay += "\n" + String.format(formatString, data[i]);
+        }
+        updateTextViewById(id, toDisplay);
+    }
+
+    public void displayText(int id, float[] data, byte[] format) {
+        String formatString = new String(format);
+        String toDisplay = String.format(formatString, data[0]);
+        if (data.length > 1) {
+            for (int i = 1; i < data.length; i++)
+                toDisplay += "\n" + String.format(formatString, data[i]);
+        }
+        updateTextViewById(id, toDisplay);
+    }
+
+    public void displayText(int id, double[] data, byte[] format) {
+        String formatString = new String(format);
+        String toDisplay = String.format(formatString, data[0]);
+        if (data.length > 1) {
+            for (int i = 1; i < data.length; i++)
+                toDisplay += "\n" + String.format(formatString, data[i]);
+        }
+        updateTextViewById(id, toDisplay);
+    }
+
+    private void updateTextViewById(final int id, final String finalStringToDisplay) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    TextView tv = textViews.get(id);
+                    if(tv != null) {
+                        tv.setText(finalStringToDisplay);
+                    }
+					
+                } catch (Exception ex) {
+                    Log.e("untitled.updateTextViewById", ex.getLocalizedMessage());
+                }
+            }
+        });
+    }
     // Log TCP info
      public void displayTCPLogs(short errorNo, int blockId, short isReceive, String argument) {
        if (mErrorInfo != null && mErrorInfo.length >= errorNo) {

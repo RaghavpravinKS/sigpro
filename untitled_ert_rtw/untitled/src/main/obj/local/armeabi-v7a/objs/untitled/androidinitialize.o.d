@@ -1,20 +1,20 @@
-C:\Users\Shesh\Downloads\Enigma\SSRP\sigpro\untitled_ert_rtw\untitled\src\main/obj/local/armeabi-v7a/objs/untitled/androidinitialize.o: \
+C:\Users\ragha\Documents\IITGN\Sem_3\SSRP\Assignment_I\untitled_ert_rtw\untitled\src\main/obj/local/armeabi-v7a/objs/untitled/androidinitialize.o: \
   ..\androidinitialize.c \
   C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\androidinitialize.h \
-  C:\Users\Shesh\AppData\Local\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\stdio.h \
-  C:\Users\Shesh\AppData\Local\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\__config \
-  C:\Users\Shesh\AppData\Local\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\stdlib.h \
-  C:\Users\Shesh\AppData\Local\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\errno.h \
-  C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\untitled_ert_rtw\MW_custom_RTOS_header.h
+  D:\SDKs\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\stdio.h \
+  D:\SDKs\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\__config \
+  D:\SDKs\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\stdlib.h \
+  D:\SDKs\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\errno.h \
+  C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\UNTITL~1\MW_custom_RTOS_header.h
 
 C:\PROGRA~3\MATLAB\SUPPOR~1\R2023a\toolbox\target\SUPPOR~1\android\include\androidinitialize.h:
 
-C:\Users\Shesh\AppData\Local\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\stdio.h:
+D:\SDKs\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\stdio.h:
 
-C:\Users\Shesh\AppData\Local\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\__config:
+D:\SDKs\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\__config:
 
-C:\Users\Shesh\AppData\Local\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\stdlib.h:
+D:\SDKs\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\stdlib.h:
 
-C:\Users\Shesh\AppData\Local\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\errno.h:
+D:\SDKs\Android\Sdk\ndk\23.1.7779620\build\\..\sources\cxx-stl\llvm-libc++\include\errno.h:
 
-C:\Users\Shesh\DOWNLO~1\Enigma\SSRP\sigpro\untitled_ert_rtw\MW_custom_RTOS_header.h:
+C:\Users\ragha\DOCUME~1\IITGN\Sem_3\SSRP\ASSIGN~1\UNTITL~1\MW_custom_RTOS_header.h:

@@ -1,0 +1,4 @@
+#Sat Sep 30 15:13:44 IST 2023
+base.0=C\:\\Users\\ragha\\Documents\\IITGN\\Sem_3\\SSRP\\Assignment_I\\untitled1_ert_rtw\\untitled1\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
