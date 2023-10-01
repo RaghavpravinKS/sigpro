@@ -95,14 +95,60 @@ Trip 1             |  Trip 2
 
 ### Madgwick Filter
 
->[!WARNING]
->Critical content demanding immediate user attention due to potential risks.
+The Magwick filter is a sensor fusion algorithm commonly used to estimate the orientation of a mobile device or vehicle based on accelerometer and gyroscope data. In the context of bicycle fall detection, this filter can provide information about the pitch, yaw, and roll of the bicycle, which can be used to detect falls.
 
-## Challenges faced
-While we started to solve our problem statement, we encountered many problems
-#### Sensor Integration and Data Synchronization
-We faced many problems while collecting raw data from sensors and plotting the results to look at the variations while riding a bicycle.
-#### Real-time Processing
-Processing the data in real-time was also a tedious task as the code or simulink file we created had to run as a standalone on the target hardware (Android Phone); due to this, we could not store any data to process it on the phone. Due to this, everything has to be done in real time with the help of filters and zero post-processing.
-#### Algorithm Development and Complexity
-Many implementations of filtering algorithms needed an array of data to be first stored to be able to run through the algorithm. However, this was not at all possible within the Android Support package for Simulink.
+#### Introduction
+
+- The Magwick filter is named after its creator, Sebastian Magwick, and is a variant of the Mahony filter, designed for low-resource applications like mobile devices and microcontrollers. It fuses data from accelerometers (ax, ay, az) and gyroscopes (gx, gy, gz) to estimate the orientation of the device or, in this case, the bicycle.
+
+#### Sensor Fusion
+
+- Sensor fusion is the process of combining data from multiple sensors to obtain a more accurate and reliable estimate of a physical quantity. In the case of the Magwick filter, it fuses accelerometer data (measuring linear acceleration) and gyroscope data (measuring angular velocity) to calculate the orientation (pitch, yaw, and roll) of the bicycle.
+
+#### Estimating Orientation
+
+- The Magwick filter employs a quaternion-based approach to estimate the orientation. Quaternions are mathematical entities that provide a compact representation of orientation. By combining accelerometer and gyroscope data, the filter continuously updates the quaternion representing the bicycle's orientation.
+
+#### Fall Detection
+
+- To detect a fall from the bicycle, you can monitor the estimated pitch, yaw, and roll angles. A sudden change in these angles may indicate a fall. Additionally, you can set specific threshold values for these angles to trigger a fall detection event.
+
+Here's a simplified pseudocode snippet for fall detection using the Magwick filter:
+
+```python
+while cycling:
+    # Read accelerometer and gyroscope data (ax, ay, az, gx, gy, gz)
+
+    # Use Magwick filter to estimate pitch, yaw, and roll
+
+    if is_fall(pitch, yaw, roll):
+        alert_fall_detected()
+```
+
+## Challenges in Implementing Bicycle Fall Detection System
+
+### Sensor Integration and Data Synchronization
+
+One of the primary challenges we encountered while developing our bicycle fall detection system was related to sensor integration and data synchronization. Collecting raw data from sensors, such as accelerometers and gyroscopes, is crucial for estimating the orientation of the bicycle accurately. However, ensuring that these sensors provided synchronized data and were properly calibrated proved to be a complex task. Variations in sensor data, even due to minor discrepancies, could result in inaccurate fall detection.
+
+### Real-time Processing
+
+Processing data in real-time posed another significant challenge. We aimed to run our code or Simulink model as a standalone application on an Android phone, which limited our ability to store data for later processing. This constraint meant that all data processing had to be performed in real-time, making it necessary to implement filtering algorithms and other processing steps without the luxury of post-processing. Real-time processing can be computationally intensive and requires efficient algorithms to meet the real-time constraints.
+
+### Algorithm Development and Complexity
+
+The development of algorithms for fall detection on a constrained platform like Android brought its own set of challenges. Many filtering algorithms typically require a continuous array of data to work effectively, which was not straightforward to achieve within the Android Support package for Simulink. We had to implement workarounds, such as using delays to collect previous values and form arrays incrementally. This added complexity to our algorithm design and increased the risk of errors.
+
+### Handling Simulink and MATLAB Errors
+
+Integrating Simulink and MATLAB into our system introduced additional challenges. Ensuring that data types were compatible between different parts of the system was essential, and small errors in data representation or communication between components could lead to unexpected behavior and inaccurate results. Debugging and resolving these issues required a deep understanding of the Simulink and MATLAB environments.
+
+### Inaccuracy in Fall Detection
+
+One significant limitation we faced was the inaccuracy in fall detection. Despite our best efforts, our algorithm was unable to consistently detect falls with high accuracy. Falls can occur in various ways and involve complex motions, making it challenging to create an algorithm that covers all scenarios. False positives and false negatives were common issues, and fine-tuning the algorithm to strike the right balance between sensitivity and specificity was a constant struggle.
+
+### Implementing TCP/IP Protocol for Audio and Video Detection
+
+Apart from sensor-related challenges, we also faced difficulties in implementing the TCP/IP protocol for audio and video detection. Ensuring that audio and video data were transmitted and received reliably in real-time required careful handling of network protocols. Synchronization and latency issues could impact the effectiveness of audio and video-based fall detection, making this aspect of our system particularly challenging.
+
+In conclusion, developing a bicycle fall detection system involves overcoming various technical hurdles related to sensor integration, real-time processing, algorithm complexity, error handling, and the inherent inaccuracy of fall detection algorithms. Additionally, integrating audio and video detection further adds to the complexity of the project. Addressing these challenges requires a combination of engineering expertise, creative problem-solving, and a commitment to refining and optimizing the system continuously.
