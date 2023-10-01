@@ -93,9 +93,6 @@ Trip 1             |  Trip 2
 
 ### Refining the detection algorithm
 - To detect changes in acceleration and angular velocity, we used a function to find the mean and standard deviation of the input from the sensors to calculate the threshold value.
-  ```julia
-  Put your code here for threshold calculation
-  ```
 - Even though this was quite a good way to measure any sudden surges in values from sensors, we needed more accurate detection.
 - We devised a function to calculate the phone's orientation by utilizing the sensor fusion concept. Madgwick Orientation Filter to get the Pitch, Yaw, and Roll values in degrees.
 - These make our detection easier and more accurate.
