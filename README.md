@@ -1,5 +1,12 @@
-## About
-This is the repository for our first assignment of the Signals Systems and Random Processes course under [Prof. Nithin V George](https://iitgn.ac.in/faculty/ee/fac-nithin). This repository contains all files related to our assignment. 
+## Signals Systems and Random Processes Assignment
+
+This is the repository for our first assignment of the Signals Systems and Random Processes course under [Prof. Nithin V George](https://iitgn.ac.in/faculty/ee/fac-nithin). This repository contains all files related to our assignment.
+
+### YouTube Video Presentation
+
+We have created a YouTube video presentation to showcase our project. You can watch the video by clicking the link below:
+
+[Watch YouTube Video](https://youtube.com/playlist?list=PLoHQdnz8DvfR4D6OkkULykJi3SMTUBhvY&feature=shared)
 
 ## Team Members
 ---------------------------
